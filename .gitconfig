@@ -1,0 +1,42 @@
+[user]
+	email = hh46.choi@samsung.com
+	name = Hyoungho Choi 
+[color]
+	ui = auto
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+	br = branch
+	unstage = reset HEAD --
+	cs = commit -s
+	last = log -1 HEAD
+	lg = log --name-status --color --abbrev-commit --date=relative --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	lg1 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+	lg2 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold white)— %an%C(reset)' --abbrev-commit
+[push]
+	default = current
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[sendemail]
+	smtpserver = smtp.gmail.com
+	smtpserverport = 587
+	smtpencryption = tls
+	smtpuser = holuyaa@gmail.com
+[http]
+	postBuffer = 524288000
+	cookiefile = /Users/holu/.gitcookies
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[core]
+	excludesfile = /Users/holu/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Users/holu/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
