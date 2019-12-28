@@ -21,6 +21,7 @@ if [ ! -d $NVIM_CONFIG_HOME ]; then
 	mkdir -p $NVIM_CONFIG_HOME
 fi
 ln -s -f $SCRIPT_DIR/init.vim $NVIM_CONFIG_HOME/init.vim
+ln -s -f $SCRIPT_DIR/ginit.vim $NVIM_CONFIG_HOME/ginit.vim
 ln -s -f $NVIM_CONFIG_HOME/init.vim ~/.vimrc
 nvim +PlugInstall +qall
 
