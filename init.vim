@@ -16,8 +16,10 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
-Plug 'inkarkat/vim-mark'
+Plug 'vim-scripts/Mark'
+Plug 'will133/vim-dirdiff'
 Plug 'antiagainst/cscope-macros.vim'
 "Plug 'cscope-quickfix'
 
@@ -31,6 +33,9 @@ Plug 'antiagainst/cscope-macros.vim'
 
 " original repos on github
 Plug 'tpope/vim-fugitive'
+
+" language
+Plug 'fatih/vim-go'
 call plug#end()
 
 set rtp+=~/.fzf
@@ -211,7 +216,7 @@ nmap <LocalLeader>fc :%foldclose!<cr>
 "map <F?> :!ctags -R --languages=C,C++,Java,Sh,Make --c++=kinds=+p --fields=+iaS --extra=+q --verbose=yes > ctags.log .<CR>
 
 "BufExplorer
-nnoremap <silent> <F2> :BufExplorer<CR>
+nnoremap <silent> <F2> :Buffers<CR>
 " WinManager plugin settings
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
 " taglist plugin settings

@@ -34,9 +34,16 @@
 	smudge = git-lfs smudge -- %f
 [core]
 	excludesfile = /Users/holu/.gitignore_global
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Users/holu/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+[difftool "nvim"]
+  cmd = nvim -d $LOCAL $REMOTE
+[diff]
+  tool = nvim
+  guitool = nvim 
+[mergetool "nvim"]
+  cmd = nvim -f -c \"Gdiff\" \"$MERGED\"
+[merge]
+  tool = nvim
+[pager]
+	log = diff-highlight |bat
+	show = diff-highlight |bat
+	diff = diff-highlight |bat
