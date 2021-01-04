@@ -32,5 +32,5 @@ if [ ! -d ~/.tmux ]; then
   cp ~/.tmux/.tmux.conf.local ~/
 fi
 
-
-ln -s -f $SCRIPT_DIR/.gitconfig ~/.gitconfig
+ln -sf $SCRIPT_DIR/.gitconfig ~/.gitconfig
+ln -sf $SCRIPT_DIR/.fzf.zsh ~/.fzf.zsh

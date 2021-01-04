@@ -1,6 +1,6 @@
 [user]
 	email = hh46.choi@samsung.com
-	name = Hyoungho Choi 
+	name = Hyoungho Choi
 [color]
 	ui = auto
 [alias]
@@ -19,11 +19,6 @@
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
-[sendemail]
-	smtpserver = smtp.gmail.com
-	smtpserverport = 587
-	smtpencryption = tls
-	smtpuser = holuyaa@gmail.com
 [http]
 	postBuffer = 524288000
 	cookiefile = /Users/holu/.gitcookies
@@ -32,8 +27,6 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
-[core]
-	excludesfile = /Users/holu/.gitignore_global
 [difftool "nvim"]
   cmd = nvim -d $LOCAL $REMOTE
 [diff]
@@ -44,6 +37,6 @@
 [merge]
   tool = nvim
 [pager]
-	log = diff-highlight |bat
-	show = diff-highlight |bat
-	diff = diff-highlight |bat
+  #log = diff-highlight |bat
+  #show = diff-highlight |bat
+  #diff = diff-highlight |bat
